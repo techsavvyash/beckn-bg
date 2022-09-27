@@ -1,14 +1,14 @@
 import { Injectable } from '@nestjs/common';
-import { CreateOnSearchDto } from './dto/create-on_search.dto';
-import { UpdateOnSearchDto } from './dto/update-on_search.dto';
+import { OnSearchDTO } from './dto/on_search.dto';
 
 @Injectable()
 export class OnSearchService {
-  create(createOnSearchDto: CreateOnSearchDto) {
+  create(searchDto: OnSearchDTO) {
+    const { context, message } = searchDto;
     return 'This action adds a new onSearch';
   }
 
-  findAll() {
+  /*findAll() {
     return `This action returns all onSearch`;
   }
 
@@ -22,5 +22,5 @@ export class OnSearchService {
 
   remove(id: number) {
     return `This action removes a #${id} onSearch`;
-  }
+  }*/
 }
